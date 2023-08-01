@@ -1,0 +1,74 @@
+{
+	"categories": [
+		{
+			"uuid": "ae07ec7e-e40f-470a-8066-f3723c48b019",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "4b418ca1-3b91-40f9-91f2-c962dd9cd788",
+			"title": "Todo",
+			"tasks": [
+				"b02db2f5-6a37-4e98-a13e-55d03b6247f2",
+				"e6486dda-049d-460f-bd50-6ca81723fa48",
+				"a8e74e6f-4625-436f-a360-dcd0daf36643",
+				"20465058-1fd0-4071-8e71-9f7fe6b138b2"
+			]
+		},
+		{
+			"uuid": "ceb664da-bc40-4eed-bd32-6332f814e4d6",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "319bdff6-3f9b-421c-8017-c793d82f87d7",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "b02db2f5-6a37-4e98-a13e-55d03b6247f2",
+			"title": "Papers please - Unconscious functions metaphor - Minigame",
+			"description": "- NPC comes in\n- You check their information to see if they are valid or not\n- While you do this your character is also looking at different information\n- Everytime you input an answer, your character has a chance to disagree with you and overrides your answer outside of your control\nThis override would simulate your unconscious brain making decisions that supersede your conscious brain's decisions and perceptions.\n**This isn't a perfect metaphor because in reality your conscious is totally onboard for whatever your unconscious says to the point where it doesn't realize that it didn't come up with the idea.\n\nMaybe to correctly simulate this you play as the unconscious and watch your character observe and make decisions. You can at any time override a decision he is making or a perception he is having and he will completely switch and use that new idea.\n\n-NPC comes in\n- Your character takes note of details on their information (through a gui you can see)\n- You can click on a particular perceptions (like \"is expired\": false) and change it (set \"is expired\" to true) and he will \"change his mind\" as if he believed that all along. \n- You get to play as an unconsious motivator for this character and alter the state of his career/life",
+			"category": "ae07ec7e-e40f-470a-8066-f3723c48b019",
+			"steps": []
+		},
+		{
+			"uuid": "e6486dda-049d-460f-bd50-6ca81723fa48",
+			"title": "Function Stack Shapes analogy",
+			"description": "Potentially use this as a way to visualize the thought process of the AI. Would also serve to make the game more personable to have a fun visualization optional.\n\n- two npcs get within each others sight and both decided to interact with the other\n- they engage in a conversation\n- Conversation consists of each one putting forth an animal (pair of functions) and the other responding (calculating how they \"felt\" about it)\n- An animal is represented as a primitive shape and you can physically watch the exchange of animals and the resulting sentiments.",
+			"category": "ae07ec7e-e40f-470a-8066-f3723c48b019",
+			"steps": []
+		},
+		{
+			"uuid": "a8e74e6f-4625-436f-a360-dcd0daf36643",
+			"title": "Deciders and The unconscious",
+			"description": "Maybe use numbers to represent large topics like principles or values. Similar to neural nets each decision (T,F) that needs to be made could just calculate a number based on a function with a different given input (the stimuli) and that result would be their \"opinions\" or \"feelings\" about the matter. This would allow for calculations of distance between principles. If one is 1.1 and another is 209.123 then these two would disagree heavily on this matter leading to conversation breakdowns and general incompatability.\n\nCould even use vectors to represent a pair of values or principles. This is scalable because to create a semantic network it would just be an N Vector of numbers that represent decisions about recieved input.\n\nThe way we would tie this into the unconscious is to add an optional second (or third, or fifth) input that would effectively change the outcome. These accomplishes both the uncontrollable nature of the unconscious as well as the mysterious hidden nature of it. It does this by forcing the person to \"go with\" the new result whether or not that is the number they would have generated themselves based on their decider equation.\n\nBringing the unconscious to light would be notifying the person (emitting a signal) when an unconscious input is added and whether or not they agree with it.  The agree part would simply be a roll to see whether they keep the value or discard it.\n\nFrom there we need to add a way to make their acceptance vs refusal of a given unconscious input that is consistent with their beliefs. The simplest way to do this would be to clump the most similar numbers (principles/values) together and say if there are 17 1's then our person will prefer more 1's. If there is an equal number of 1's and 2's but mostly random noise aside from that our brain will prefer results closer to their prefered values.\n\nTo implement growth then we would just need to add functionality for locking in a person's result from the equation given a stimuli. People who are not growing or self aware will not be able to predict the result of the function or calculate how the unconscious input(s) would effect the outcome. \n****This introduces 3 levels of self awareness:\n1 - Unaware: Rolls for a result and sticks with the result.\n2 - Aware, not in control: Able to predict the result of their decision rolls without the ability to change it or predict the outcome including the unconscious inputs\n3 - Aware and in control: Able to predict the result of their decisions rolls WITH the unconscious inputs included. At this point they have the option to change the unconscious inputs to manipulate the resulting number, effectively gaining full control over their decision making.",
+			"category": "ae07ec7e-e40f-470a-8066-f3723c48b019",
+			"steps": []
+		},
+		{
+			"uuid": "20465058-1fd0-4071-8e71-9f7fe6b138b2",
+			"title": "Semantic Network Implementation",
+			"description": "See notes on iphone",
+			"category": "ae07ec7e-e40f-470a-8066-f3723c48b019",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"4b418ca1-3b91-40f9-91f2-c962dd9cd788"
+			],
+			[
+				"ceb664da-bc40-4eed-bd32-6332f814e4d6"
+			],
+			[
+				"319bdff6-3f9b-421c-8017-c793d82f87d7"
+			]
+		]
+	}
+}

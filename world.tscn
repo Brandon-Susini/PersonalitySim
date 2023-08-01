@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://4qlwquwvui6c"]
+
+[ext_resource type="PackedScene" uid="uid://nadyxadm20ne" path="res://person.tscn" id="1_syf22"]
+
+[node name="World" type="Node2D"]
+
+[node name="Person" parent="." instance=ExtResource("1_syf22")]
+position = Vector2(1109, 230)
+
+[node name="Person2" parent="." instance=ExtResource("1_syf22")]
+position = Vector2(185, 176)
+
+[node name="Person3" parent="." instance=ExtResource("1_syf22")]
+position = Vector2(1759, 953)

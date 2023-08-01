@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://nadyxadm20ne"]
+
+[ext_resource type="Texture2D" uid="uid://cu6pngjrsmioc" path="res://icon.svg" id="1_hm38l"]
+[ext_resource type="Script" path="res://person.gd" id="2_bygiu"]
+[ext_resource type="Resource" uid="uid://cchfe5t1i36d0" path="res://type_info.tres" id="3_un3j3"]
+[ext_resource type="Script" path="res://StateMachine.gd" id="4_y5k35"]
+[ext_resource type="Script" path="res://States/Wander.gd" id="5_6j7g8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpolo"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vn4i4"]
+radius = 200.0
+
+[sub_resource type="Animation" id="Animation_cupfj"]
+resource_name = "wander"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y8cs6"]
+_data = {
+"wander": SubResource("Animation_cupfj")
+}
+
+[node name="Person" type="CharacterBody2D"]
+position = Vector2(367, 354)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_bygiu")
+type_info = ExtResource("3_un3j3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hm38l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mpolo")
+
+[node name="FOV" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FOV"]
+shape = SubResource("CircleShape2D_vn4i4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y8cs6")
+}
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_y5k35")
+initial_state = NodePath("Wander")
+
+[node name="Wander" type="Node" parent="State Machine"]
+script = ExtResource("5_6j7g8")
+wait_time = 1.0
+wander_speed = 50.0
+
+[connection signal="area_entered" from="FOV" to="." method="_on_fov_area_entered"]
+[connection signal="area_shape_entered" from="FOV" to="." method="_on_fov_area_shape_entered"]
+[connection signal="changeState" from="State Machine/Wander" to="State Machine" method="_on_wander_change_state"]
